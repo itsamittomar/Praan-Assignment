@@ -5,7 +5,8 @@ exports.deviceFinder =(req,res,next) =>{
     try{
         const reqBody = req.body
         const deviceId = req.params.Id 
-        User.findOne({device_id: deviceId})
+        const pMValue = req.params.pM
+        User.findOne({device_id: deviceId ,pM:pMValue })
         .then(device =>{
             if(!device){
                 const error = new Error("Device not found with this device Id");

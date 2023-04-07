@@ -18,18 +18,20 @@ const DeviceSchema = new Schema({
     type: String,
     required: true
   },
-  p1: {
-    type: String,
-    required: true
-  },
-  p25: {
-    type: String,
-    required: true
-  },
-  p10: {
-    type: String,
-    required: true
-  }
+  pM:{
+      p1: {
+        type: String,
+        required: true
+      },
+      p25: {
+        type: String,
+        required: true
+      },
+      p10: {
+        type: String,
+        required: true
+      }
+}
 });
 
 module.exports = mongoose.model('DeviceSchema', DeviceSchema);
