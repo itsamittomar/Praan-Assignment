@@ -1,7 +1,7 @@
 const User = require('../models/device');
-const { use } = require('../routes/device');
+const { use } = require('../routes/pm.route');
 
-exports.deviceFinder =(req,res,next) =>{
+exports.pMFinder =(req,res,next) =>{
     try{
         const reqBody = req.body
         const deviceId = req.params.Id 
